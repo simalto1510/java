@@ -15,19 +15,15 @@ public class Hello {
 		System.out.println("j =" +j);
 		nouv = i;
 		i = j;
-		j = nouv;
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      	
-		
+		j = nouv;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    	
 		System.out.println("Nouveau valeur de i : " + i);
 		System.out.println("Nouveau valeur de j : " + j); **/
 		
 		/*********************************************/
-		
 	/**	String s = "toto"; 
 		System.out.println(s); **/
 		
 		/**** condition **/
-		
 		/** TP3 ***/
 		/** Dans main
 		 * 
@@ -44,7 +40,6 @@ public class Hello {
 			System.out.print(l+ " "); //Afficher les uns parmi les autres
 		}
 		System.out.println();**/
-		
 		//2
 	/**	System.out.println("Compte à rebours");
 		int c= 10;
@@ -53,7 +48,6 @@ public class Hello {
 			System.out.print(c+ " ");
 			c = c - 1;
 		}
-		
 		System.out.println("BOOM");**/
 			
 		//3
@@ -71,8 +65,7 @@ public class Hello {
 	   
 	/**** Coorection nombre premier***/   
 	   //4
-	   
-	   
+	    
 // final int NBRPREM = 500; // Les nombre des nombres premiers à trouver
 	/**   int toTest = 2; 
 	   int compteur = 0;
@@ -97,7 +90,7 @@ public class Hello {
 			}
 			toTest++;
 		}
-	   
+		
 	   int v= 20;
 	   int w=30;
 	   int result = add(v,w);
@@ -105,7 +98,7 @@ public class Hello {
 ////////////////////////////////////////////////////////////////////////////////////	   
 	   // TP Tableaux
 	   //
-		System.out.println("|*****************************************| ");
+/**	System.out.println("|*****************************************| ");
 		System.out.println("         TP sur les tableaux                ");
 		System.out.println("|*****************************************| ");
 		System.out.println(" ");
@@ -118,9 +111,10 @@ public class Hello {
 	   double moyenne;
 	   int MAXI;
 	   int MINI;
-	   tab = new int[ECHELLE];
+	   tab = new int[ECHELLE]; **/
+		
 	   
-	   Remplir_random(tab);
+	/**   Remplir_random(tab);
 	   display(tab);
 	   System.out.println(" ");
 	   
@@ -136,8 +130,8 @@ public class Hello {
 	   moyenne = average(tab);
 	   System.out.println("La moyenne des valeurs du tableau est " + moyenne);
 	   System.out.println(" ");
-	   
-	  int value = 100;
+	   **/
+/**	  int value = 100;
 	  final int value2 = 111;
 	   int index = 3;
 	   int index1 = 1;
@@ -149,8 +143,8 @@ public class Hello {
 	   display(tab);
 	   
 	   permut2(tab,2);
-	   display(tab);
-	   
+	   display(tab); **/
+	/**   
 	   System.out.println("remove " );
 	  // int[] tabnew=new int[tab.length-1];
 	   //tabnew= remove(tab,4);
@@ -200,11 +194,10 @@ public class Hello {
 	   display(tab7);
 	   System.out.println(" ");
 	   
-	   
 	   System.out.println("Tri Bulle " );
 	   int[] tab8=new int[tab.length];
 	   tab8 = clone(tab);
-	   tab8=Tri_max(tab8);
+	   tab8=Tri_min(tab8);
 	   display(tab);
 	   display(tab8);
 	   System.out.println(" ");
@@ -215,24 +208,37 @@ public class Hello {
 	   System.out.println("Factorielle est  " + fact);
 	   System.out.println(" ");
 	   
-	   
 	   System.out.println("SOMME RECURSIF " );
 	   int incremente = 0;
 	   int Somme = Somme_recursif(tab,incremente);
 	   System.out.println("Somme est  " + Somme);
 	   System.out.println(" ");
-	   
-	   
 	  
-	   
-	   
 	   System.out.println("|*************************************************************| ");
 	   System.out.println("           LA FIN du TP sur les tableaux                        ");
 	   System.out.println("|*************************************************************| ");
-	   System.out.println(" ");
+	   System.out.println(" ");**/
 	   
+/**	  Book b = new Book();
+	  b.title = "Java";
+	  System.out.println(" The book title created is :" + b.title);*/
 	  
-	   
+/**	  Book b1 = new Book();
+	  b1.title = "Toto";
+	  Book b2 = new Book();
+	  b2.title = "Titi";
+	  
+			  
+	  Book b3 = new Book();
+	  b3.title = b1.title;
+	  System.out.println(" ");
+	  if ( b1 == b3){
+		  System.out.println(" Those two books "+ b1.title+" and "+ b3.title+" are alike ");
+	  }
+	  else{
+		  System.out.println(" Those two books "+ b1.title+" and "+ b3.title+" are Different ");
+	  }*/
+			   
 	}
 	
 	
@@ -399,8 +405,6 @@ public class Hello {
 		return tabnew;
 	}
 	
-	
-
 ////////////////////////////////////////////////////////////////////////
 //La fonction inverse qui inverse un tableau
 	
@@ -480,16 +484,20 @@ public class Hello {
 		}
  	}
 ////////////////////////////////////////////////////////////////////////
-//LA Fonction tri max 
-	public static int[] Tri_max(int[] tab){
+//LA Fonction tri max // Qui ne fonctionne pas bien
+	public static int[] Tri_min(int[] tab){
 		int[] tabnew = new int[tab.length];
+		int[] tabclone = new int[tab.length];
+		tabclone= clone(tab);
 		int MIN = 0;
-		int MAX = max(tab);
-		for (int i = 0; i< tab.length;i++){
-			MIN = min(tab);
-			if (MIN < tab[i]){
+		int MAX = max(tab) +1;
+		int index =0;
+		for (int i = 0; i< tabclone.length;i++){
+			//deuxieme boucle for pour 
+			MIN = min2(tab,index);
+			if (MIN <= tab[i]){
 				tabnew[i]=MIN;
-				tab[i] = MAX+1;
+				MIN=MAX+1;
 			}
 		}
 		return tabnew;
@@ -519,7 +527,7 @@ public class Hello {
 			}
 	}
 ///////////////////////////////////////////////////////////////////////
-/***	//indice du min
+	//indice du min
 	public static int Indice(int[] tab){
 		int index=0;
 		int MIN = min2(tab, index);
@@ -527,18 +535,18 @@ public class Hello {
 		return index;
 	
 	}
-//
+
 	public static int min2(int[] tab, int index){
-	int MIN;
-	MIN = tab[0];
-	for (int i=0; i< tab.length; i++){
-		if (MIN > tab[i]){
-				MIN = tab[i];
-				index = i;
+		int MIN;
+		MIN = tab[0];
+		for (int i=0; i< tab.length; i++){
+			if (MIN > tab[i]){
+					MIN = tab[i];
+					tab[i]=MIN+800;
+				}
 			}
+		return MIN;
 		}
-	return MIN;
-	}***/
 }
  
 
