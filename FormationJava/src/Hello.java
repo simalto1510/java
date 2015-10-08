@@ -264,6 +264,7 @@ public class Hello {
 	  
 	  Author a2= new Author();
 	  a2.setFirstname("Marc");
+	  
 	  a2.setLastname("Lopez");
 	  
 	  
@@ -289,6 +290,17 @@ public class Hello {
 	 
 	  b1.afficher();
 	 
+	  
+	  System.out.println(" ");
+	  Counter c1 = new Counter();
+	  Counter c2 = new Counter();
+	  
+	  System.out.println( "\nCounter C1 : " + c1.increment()+ " "+ c1.increment()+" " + c1.increment());
+	  System.out.println( "\nCounter C2 : " + c2.increment()+ " "+ c2.increment()+" " + c2.increment());
+	  
+	  //Same as:
+	  System.out.println( " \nCounter : " + Counter.increment()+ " "+  Counter.increment()+" " +  Counter.increment());
+
 	  
 	  
 	  /**  Book b1 = new Book();

@@ -23,8 +23,11 @@ public class Book {
 		
 		for (int i = 0; i<nbAuthors; i++){
 			authors[i].afficher();
+			 if( i != nbAuthors-1){
+				 System.out.println(" ET ");
+				 }
 		}
-		
+		System.out.println(" ");
 		System.out.println(" and published by");
 		publisher.afficher();
 		}
