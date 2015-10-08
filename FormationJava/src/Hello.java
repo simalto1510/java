@@ -1,3 +1,4 @@
+//import java.util.Date;
 import java.util.Random;
 
 public class Hello {
@@ -218,26 +219,93 @@ public class Hello {
 	   System.out.println("           LA FIN du TP sur les tableaux                        ");
 	   System.out.println("|*************************************************************| ");
 	   System.out.println(" ");**/
-	   
-/**	  Book b = new Book();
-	  b.title = "Java";
-	  System.out.println(" The book title created is :" + b.title);*/
+//Define books	   
+	  Book b = new Book();
+	  b.setId(12345678);
+	  b.setIsbn(1877309916);
+	  b.setLang("chinese");
+	  b.setTitle("Grenouilles");
+	  b.setPrice(19.20);
+	  b.setNbPage(200);
+	  b.setNbAuthors(1);
+	  b.getDate();
+
+	  Book b1 = new Book();
+	  b1.setId(10230);
+	  b1.setIsbn(14451253);
+	  b1.setLang("Japanese");
+	  b1.setTitle("Yokohama");
+	  b1.setPrice(10.20);
+	  b1.setNbPage(500);
+	  b.setNbAuthors(2);
+	  b1.getDate();
+//Define publishers  
+	  Publisher p = new Publisher();
+	  p.setNom("Points");
+	  p.setPays("France");
+	  p.setSiret(1425452);
+	  p.setEmail("point@gmail.fr");
 	  
-/**	  Book b1 = new Book();
-	  b1.title = "Toto";
+	  Publisher p1 = new Publisher();
+	  p1.setNom("Flammarian");
+	  p1.setPays("France");
+	  p1.setSiret(1000002);
+	  p1.setEmail("flammarian@gmail.fr");
+//Define authors
+	  Author[] tabAuthor= new Author[10];
+	  
+	  Author a= new Author();
+	  a.setFirstname("Mo");
+	  a.setLastname("Yo");
+	  
+	  Author a1= new Author();
+	  a1.setFirstname("Louis");
+	  a1.setLastname("Floop");
+	  
+	  Author a2= new Author();
+	  a2.setFirstname("Marc");
+	  a2.setLastname("Lopez");
+	  
+	  
+	  b.setAuthor(tabAuthor);
+	  b1.setAuthor(tabAuthor);
+	  
+	  b.setPublisher(p);
+	  b1.setPublisher(p1);
+	  
+	  b.addAuthor(a);
+	  b1.addAuthor(a1);
+	  b1.addAuthor(a2);
+	  
+	  
+	  System.out.println(" ");
+	  System.out.println(" The first book : " );
+	 
+	  b.afficher();
+	  
+	  
+	  System.out.println(" ");
+	  System.out.println(" The second book : " );
+	 
+	  b1.afficher();
+	 
+	  
+	  
+	  /**  Book b1 = new Book();
+	  b1.setTitle("Laugh");
 	  Book b2 = new Book();
-	  b2.title = "Titi";
+	  b2.setTitle("Low");
 	  
 			  
 	  Book b3 = new Book();
-	  b3.title = b1.title;
+	  b3.setTitle(b1.getTitle());
 	  System.out.println(" ");
 	  if ( b1 == b3){
-		  System.out.println(" Those two books "+ b1.title+" and "+ b3.title+" are alike ");
+		  System.out.println(" Those two books "+ b1.getTitle()+" and "+ b3.getTitle()+" are alike ");
 	  }
 	  else{
-		  System.out.println(" Those two books "+ b1.title+" and "+ b3.title+" are Different ");
-	  }*/
+		  System.out.println(" Those two books "+ b1.getTitle()+" and "+ b3.getTitle()+" are Different ");
+	  }**/
 			   
 	}
 	
@@ -531,7 +599,7 @@ public class Hello {
 	public static int Indice(int[] tab){
 		int index=0;
 		int MIN = min2(tab, index);
-		
+		System.out.println("  " + MIN);
 		return index;
 	
 	}

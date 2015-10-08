@@ -3,13 +3,51 @@
   associations="true" dependencies="false" nesting-relationships="true">  
   <class id="1" language="java" name="Book" project="FormationJava" file="/FormationJava/src/Book.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="423" width="128" x="273" y="-42"/>    
+    <position height="531" width="160" x="142" y="-94"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
+  <class id="2" language="java" name="Publisher" project="FormationJava" file="/FormationJava/src/Publisher.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="291" width="144" x="481" y="41"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="Author" project="FormationJava" file="/FormationJava/src/Author.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="554" y="469"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <association id="4">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="5" name="authors">        
+        <position height="18" width="45" x="352" y="331"/>      
+      </attribute>      
+      <multiplicity id="6" minimum="0" maximum="2147483647">        
+        <position height="16" width="21" x="440" y="392"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="7">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="8" name="publisher"/>      
+      <multiplicity id="9" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    
