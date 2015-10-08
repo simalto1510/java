@@ -1,3 +1,4 @@
+package com.m2i.formation.media;
 import java.util.Date;
 
 public class Book {
@@ -11,6 +12,7 @@ public class Book {
 	private String lang;
 	private Publisher publisher;
 	private Author[] authors = new Author[10];
+	private BookCategory category;
 	
 	//Methods of class BOOK to delete here !!!!!
 	public void afficher(){
@@ -19,13 +21,11 @@ public class Book {
 		System.out.println(" It costs : " + price+" $ ");
 		System.out.println(" It gets : " + nbPage+" pages ");
 		System.out.println(" Its ISBN : " + id);
+		System.out.println(" Category : " + category);
 		System.out.println(" It is written in : " + lang +" by ");
 		
 		for (int i = 0; i<nbAuthors; i++){
 			authors[i].afficher();
-			 if( i != nbAuthors-1){
-				 System.out.println(" ET ");
-				 }
 		}
 		System.out.println(" ");
 		System.out.println(" and published by");
@@ -106,6 +106,14 @@ public class Book {
 
 	public void setAuthor(Author[] authors) {
 		this.authors = authors;
+	}
+
+	public BookCategory getCategory() {
+		return category;
+	}
+
+	public void setCategory(BookCategory category) {
+		this.category = category;
 	}
 
 

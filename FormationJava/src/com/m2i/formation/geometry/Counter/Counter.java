@@ -1,3 +1,4 @@
+package com.m2i.formation.geometry.Counter;
 
 public class Counter {
 	private static int i = 0;

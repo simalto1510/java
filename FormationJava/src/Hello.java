@@ -1,6 +1,13 @@
 //import java.util.Date;
 import java.util.Random;
 
+import com.m2i.formation.media.*;
+/*Same as like the name above
+ * 
+  import com.m2i.formation.media.Book;
+import com.m2i.formation.media.BookCategory;
+import com.m2i.formation.media.Publisher;*/
+
 public class Hello {
 
 	public static void main(String[] args) {
@@ -8,7 +15,7 @@ public class Hello {
 	//	System.out.println("Hello world"); 
 		
 		/******************************************/
-/**		int i = 10;
+/*		int i = 10;
 		int j = 20;
 		int nouv;
 		
@@ -20,9 +27,9 @@ public class Hello {
 		System.out.println("Nouveau valeur de i : " + i);
 		System.out.println("Nouveau valeur de j : " + j); **/
 		
-		/*********************************************/
-	/**	String s = "toto"; 
-		System.out.println(s); **/
+		//
+	/*	String s = "toto"; 
+		System.out.println(s); */
 		
 		/**** condition **/
 		/** TP3 ***/
@@ -37,12 +44,12 @@ public class Hello {
 		 **/ 
 ////////////////////////////////////////////////////////////////////////////////////
 		//1
-/**		for(int l=0; l<100; l++){
+/*	for(int l=0; l<100; l++){
 			System.out.print(l+ " "); //Afficher les uns parmi les autres
 		}
 		System.out.println();**/
 		//2
-	/**	System.out.println("Compte à rebours");
+	/*	System.out.println("Compte à rebours");
 		int c= 10;
 		while (c > 0)
 		{
@@ -53,7 +60,7 @@ public class Hello {
 			
 		//3
 		
-/**	   int d = 2;
+/*	   int d = 2;
 	   final int MAX= 1024;
 	   System.out.println("Les puissances de 2 sont : ");
 	   
@@ -64,11 +71,11 @@ public class Hello {
 	   }
 	   System.out.println();**/
 	   
-	/**** Coorection nombre premier***/   
+	/* Coorection nombre premier***/   
 	   //4
 	    
 // final int NBRPREM = 500; // Les nombre des nombres premiers à trouver
-	/**   int toTest = 2; 
+	/*   int toTest = 2; 
 	   int compteur = 0;
 	   for (int n= 0; n < NBRPREM; n++ ){
 		   boolean isPrime = true;
@@ -99,7 +106,7 @@ public class Hello {
 ////////////////////////////////////////////////////////////////////////////////////	   
 	   // TP Tableaux
 	   //
-/**	System.out.println("|*****************************************| ");
+/*	System.out.println("|*****************************************| ");
 		System.out.println("         TP sur les tableaux                ");
 		System.out.println("|*****************************************| ");
 		System.out.println(" ");
@@ -115,7 +122,7 @@ public class Hello {
 	   tab = new int[ECHELLE]; **/
 		
 	   
-	/**   Remplir_random(tab);
+	/*   Remplir_random(tab);
 	   display(tab);
 	   System.out.println(" ");
 	   
@@ -132,7 +139,7 @@ public class Hello {
 	   System.out.println("La moyenne des valeurs du tableau est " + moyenne);
 	   System.out.println(" ");
 	   **/
-/**	  int value = 100;
+/*	  int value = 100;
 	  final int value2 = 111;
 	   int index = 3;
 	   int index1 = 1;
@@ -145,7 +152,7 @@ public class Hello {
 	   
 	   permut2(tab,2);
 	   display(tab); **/
-	/**   
+	/*   
 	   System.out.println("remove " );
 	  // int[] tabnew=new int[tab.length-1];
 	   //tabnew= remove(tab,4);
@@ -227,7 +234,7 @@ public class Hello {
 	  b.setTitle("Grenouilles");
 	  b.setPrice(19.20);
 	  b.setNbPage(200);
-	  b.setNbAuthors(1);
+	  b.setCategory(BookCategory.Computer);
 	  b.getDate();
 
 	  Book b1 = new Book();
@@ -236,8 +243,9 @@ public class Hello {
 	  b1.setLang("Japanese");
 	  b1.setTitle("Yokohama");
 	  b1.setPrice(10.20);
+	  b1.setCategory(BookCategory.SF);
 	  b1.setNbPage(500);
-	  b.setNbAuthors(2);
+
 	  b1.getDate();
 //Define publishers  
 	  Publisher p = new Publisher();
@@ -291,7 +299,7 @@ public class Hello {
 	  b1.afficher();
 	 
 	  
-	  System.out.println(" ");
+	/*  System.out.println(" ");
 	  Counter c1 = new Counter();
 	  Counter c2 = new Counter();
 	  
@@ -300,10 +308,10 @@ public class Hello {
 	  
 	  //Same as:
 	  System.out.println( " \nCounter : " + Counter.increment()+ " "+  Counter.increment()+" " +  Counter.increment());
-
+      **/
 	  
 	  
-	  /**  Book b1 = new Book();
+	  /*  Book b1 = new Book();
 	  b1.setTitle("Laugh");
 	  Book b2 = new Book();
 	  b2.setTitle("Low");
@@ -384,7 +392,7 @@ public class Hello {
 		average = average/tab.length;
 		return average;
 		}
-	/** autre façon d'écrire cette fonction 
+	/* autre façon d'écrire cette fonction 
 	public static double average1(int[] tab){
 		return ((double) sum(tab))/tab.length;
 		}**/
@@ -400,7 +408,7 @@ public class Hello {
 			}
 		}
 	//autre façon d'écrire cette fonction
-/**	public static int[] createRandomlyTab(int length){
+/*	public static int[] createRandomlyTab(int length){
 		int[] tab = new int[length];
 		Random rnd = new Random();
 		for (int i=0; i< tab.length; i++){
@@ -423,7 +431,7 @@ public class Hello {
 //////////////////////////////////////////////////////////////
 	// La fonction permut permute la valeur d'un tableau avec l'element precedent
 	public static void permut2(int[] tab, int index){
-	/**	int change;
+	/*	int change;
 		int decale;
 		decale = index - 1; //l'indice du valeur à remplacer à tab[indice]
 		change=tab[index]; //on garde la valeur de l'index à decaler à + 1 de pas
@@ -433,7 +441,7 @@ public class Hello {
 	}
 ////////////////////////////////////////////////////////////////
 	// la fonction remove qui suprime la valeur de l'indice donné
-/**	public static int[] remove(int[] tab, int index){
+/*	public static int[] remove(int[] tab, int index){
 		int longueur;
 		longueur = tab.length - 1;
 		int[] tabchange = new int[longueur];
@@ -498,7 +506,7 @@ public class Hello {
 		return tabnew;
 	}
 	//Autre façon d'ecrire Inverse
-	/**	public static int[] inverse2(int[] tab){
+	/*	public static int[] inverse2(int[] tab){
 			int[] tabnew = new int[tab.length];
 			for(int i=0; i <tab.length;i++){
 				tabnew[tab.length -1 -i] = tab[i];
