@@ -278,11 +278,17 @@ public class Hello {
 	  
 	  b.setPublisher(p);
 	  b1.setPublisher(p1);
-	  
-	  b.addAuthor(a);
-	  b1.addAuthor(a1);
-	  b1.addAuthor(a2);
-	  
+	//On  
+	  try {
+		b.addAuthor(a);
+		b1.addAuthor(a1);
+		b1.addAuthor(a2);  
+	  	} 
+	  catch (MediaException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();//if I get this kind of error I execute this action otherwise I do the action above
+	  }
+	 
 	  
 	  System.out.println(" ");
 	  System.out.println(" The first book : " );
