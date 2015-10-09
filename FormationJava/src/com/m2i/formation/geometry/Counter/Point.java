@@ -4,7 +4,7 @@ public class Point {
 	public int x;
 	public int y;
 	
-	public void afficher(){
+	public void display(){
 		System.out.println("("+x+";"+y+")");
 		}
 	public void deplacer(int newx, int newy){

@@ -1,123 +1,79 @@
 package com.m2i.formation.media;
 import java.util.Date;
 
-public class Book {
-	private String title;
-	private int id;
-	private double price;
+public class Book extends Media {
+	
 	private Date date;
 	private int nbPage;
 	private int nbAuthors=0;
 	private int isbn;
 	private String lang;
-	private Publisher publisher;
 	private Author[] authors = new Author[10];
 	private BookCategory category;
 	
 	//Methods of class BOOK to delete here !!!!!
 	public void afficher(){
-		System.out.println(" The title  : " + title);
-		System.out.println(" Its Id is : " + id);
-		System.out.println(" It costs : " + price+" $ ");
+		super.afficher();
 		System.out.println(" It gets : " + nbPage+" pages ");
-		System.out.println(" Its ISBN : " + id);
+		System.out.println(" Its ISBN : " + isbn);
 		System.out.println(" Category : " + category);
 		System.out.println(" It is written in : " + lang +" by ");
-		
 		for (int i = 0; i<nbAuthors; i++){
 			authors[i].afficher();
 		}
 		System.out.println(" ");
-		System.out.println(" and published by");
-		publisher.afficher();
-		}
-	
+		
+	}
 	public void addAuthor(Author newauthor){
 		
 			authors[nbAuthors]=newauthor;
-			nbAuthors++;
-		
-	}
-	
- 	public Publisher getPublisher() {
-		return publisher;
-	}
-	public void setPublisher(Publisher publisher) {
-		this.publisher = publisher;
-	}
-	public int getNbPage() {
-		return nbPage;
-	}
-	public void setNbPage(int newnbPage) {
-		nbPage = newnbPage;
-	}
-	public String getTitle() {
-		return title;
-	}
-	public void setTitle(String newtitle) {
-		title = newtitle;
-	}
-	public double getPrice() {
-		return price;
-	}
-	public void setPrice(double newprice) {
-		price = newprice;
+			nbAuthors++;	
 	}
 	public Date getDate() {
 		return date;
 	}
-	public void setDate(Date newdate) {
-		date = newdate;
+	public void setDate(Date date) {
+		this.date = date;
 	}
-	public int getId() {
-		return id;
+	public int getNbPage() {
+		return nbPage;
 	}
-	public void setId(int newid) {
-		id = newid;
+	public void setNbPage(int nbPage) {
+		this.nbPage = nbPage;
+	}
+	public int getNbAuthors() {
+		return nbAuthors;
+	}
+	public void setNbAuthors(int nbAuthors) {
+		this.nbAuthors = nbAuthors;
 	}
 	public int getIsbn() {
 		return isbn;
 	}
-	public void setIsbn(int newisbn) {
-		isbn = newisbn;
+	public void setIsbn(int isbn) {
+		this.isbn = isbn;
 	}
 	public String getLang() {
 		return lang;
 	}
-	public void setLang(String newlang) {
-		lang = newlang;
+	public void setLang(String lang) {
+		this.lang = lang;
 	}
-
-
-	public int getNbAuthors() {
-		return nbAuthors;
-	}
-
-
-	public void setNbAuthors(int nbAuthors) {
-		this.nbAuthors = nbAuthors;
-	}
-
-
 	public Author[] getAuthors() {
 		return authors;
 	}
-
-
-	public void setAuthor(Author[] authors) {
+	public void setAuthors(Author[] authors) {
 		this.authors = authors;
 	}
-
 	public BookCategory getCategory() {
 		return category;
 	}
-
 	public void setCategory(BookCategory category) {
 		this.category = category;
 	}
-
-
 	
-	
-	
+	@Override
+	public double getVATPrice(){
+		return getPrice() * 1.05;
+	}
 }

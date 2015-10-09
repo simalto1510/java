@@ -31,9 +31,9 @@ public class Hello {
 	/*	String s = "toto"; 
 		System.out.println(s); */
 		
-		/**** condition **/
-		/** TP3 ***/
-		/** Dans main
+		/* condition **/
+		/* TP3 ***/
+		/* Dans main
 		 * 
 		 Afficher les chiffres de 0 à 99
 		 afficher 10 9 8 ..321 BOOM
@@ -260,7 +260,7 @@ public class Hello {
 	  p1.setSiret(1000002);
 	  p1.setEmail("flammarian@gmail.fr");
 //Define authors
-	  Author[] tabAuthor= new Author[10];
+
 	  
 	  Author a= new Author();
 	  a.setFirstname("Mo");
@@ -275,9 +275,6 @@ public class Hello {
 	  
 	  a2.setLastname("Lopez");
 	  
-	  
-	  b.setAuthor(tabAuthor);
-	  b1.setAuthor(tabAuthor);
 	  
 	  b.setPublisher(p);
 	  b1.setPublisher(p1);
@@ -296,8 +293,44 @@ public class Hello {
 	  System.out.println(" ");
 	  System.out.println(" The second book : " );
 	 
-	  b1.afficher();
+	  b1.afficher(); 
+	  
+	//Cd 
+	  
+/*	  
+	  Publisher p2 = new Publisher();
+	  p2.setNom("Jam Records");
+	  p2.setPays("USA");
+	  p2.setSiret(1333333);
+	  p2.setEmail("jamrecordsUSA@gmail.fr");
+	  
+	  
+	  Cd c=new Cd();
+	  c.setId(11135);
+	  c.setPrice(17.6);
+	  c.setPublisher(p2);
+	  c.setNbTrack(20);
+	  c.setTitle("Documentary");
+	  c.afficher();
 	 
+	  
+	  Dvd d= new Dvd();
+	  d.setId(12222);
+	  d.setPrice(30.6);
+	  d.setPublisher(p2);
+	  d.setRegion(20);
+	  d.setTitle("Hitch");
+	  d.afficher(); */
+	  
+	 //polymorphism's basics
+	  Media m=new Book();
+	  m.setPrice(10);
+	  double pricenew =m.getVATPrice();
+	  System.out.println(" New price : " +pricenew);
+	  
+	  
+	  
+	  
 	  
 	/*  System.out.println(" ");
 	  Counter c1 = new Counter();
