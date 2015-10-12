@@ -226,7 +226,7 @@ public class Hello {
 	   System.out.println("|*************************************************************| ");
 	   System.out.println(" ");**/
 //Define books	   
-	/*  Book b = new Book();
+	Book b = new Book();
 	  b.setId(12345678);
 	  b.setIsbn(1877309916);
 	  b.setLang("chinese");
@@ -298,11 +298,11 @@ public class Hello {
 	  System.out.println(" ");
 	  System.out.println(" The second book : " );
 	 
-	  b1.afficher(); */
+	  b1.afficher(); 
 	  
 	//Cd 
 	  
-/*	  
+  
 	  Publisher p2 = new Publisher();
 	  p2.setNom("Jam Records");
 	  p2.setPays("USA");
@@ -325,7 +325,7 @@ public class Hello {
 	  d.setPublisher(p2);
 	  d.setRegion(20);
 	  d.setTitle("Hitch");
-	  d.afficher(); */
+	  d.afficher(); 
 	  
 	 //polymorphism's basics
 	/*  Media m=new Book();
@@ -349,31 +349,31 @@ public class Hello {
       **/
 	  
 	  
-	  /*  Book b1 = new Book();
-	  b1.setTitle("Laugh");
-	  Book b2 = new Book();
-	  b2.setTitle("Low");
+	  Book b4 = new Book();
+	  b4.setTitle("Laugh");
+	  Book b5 = new Book();
+	  b5.setTitle("Low");
 	  
 			  
-	  Book b3 = new Book();
-	  b3.setTitle(b1.getTitle());
+	  Book b6 = new Book();
+	  b6.setTitle(b1.getTitle());
 	  System.out.println(" ");
-	  if ( b1 == b3){
-		  System.out.println(" Those two books "+ b1.getTitle()+" and "+ b3.getTitle()+" are alike ");
+	  if ( b4 == b6){
+		  System.out.println(" Those two books "+ b4.getTitle()+" and "+ b6.getTitle()+" are alike ");
 	  }
 	  else{
-		  System.out.println(" Those two books "+ b1.getTitle()+" and "+ b3.getTitle()+" are Different ");
-	  }**/
+		  System.out.println(" Those two books "+ b4.getTitle()+" and "+ b6.getTitle()+" are Different ");
+	  }
 			 
 		
 		
 //Test sur la liste
 	
-  /* CollectionTest listOut= new CollectionTest();
+  CollectionTest listOut= new CollectionTest();
 	List<Book> listB = listOut.listTest();
 	Set<Book> SetB = listOut.setTest();
 	Map<Integer, Book> m = listOut.mapTest();
-	Book b1=new Book();
+	Book b7=new Book();
 	b1.getDate();
 	
     System.out.println(" \n ListBooks : ");
@@ -390,17 +390,18 @@ public class Hello {
 	
 	System.out.println(" \n MapBooks : ");
 	
-	b1 =m.get(123);
+	b7 =m.get(123);
 	for(int key: m.keySet()){
 		 System.out.println(key);
 		 System.out.println(m.get(key));
+		 
 	}
-		*/
 		
 		
-	Cart cartList = new Cart();
-	Media b=new Book();
-    b.setPrice(10);
+		
+Cart cartList = new Cart();
+	Media b8=new Book();
+    b8.setPrice(10);
     
     Media cd=new Cd();
     cd.setPrice(11);
@@ -408,13 +409,20 @@ public class Hello {
     Media dvd = new Dvd();
     dvd.setPrice(11);
     
-    cartList.getMedias().add(b);//getMedias return a list of type Media thus we have access
+    cartList.getMedias().add(b8);//getMedias return a list of type Media thus we have access
     cartList.getMedias().add(cd);// to different of List Media
     cartList.getMedias().add(dvd);
     
   
     double result = cartList.getVATPrice();
+    
+    
     System.out.println(" \n VAT Price : "+ result);
+		/*String machaine ="3";
+		int monentier= Integer.getInteger(machaine);
+		monentier = Integer.parseInt(machaine);
+		Integer.toString(monentier);*/
+		
      
 	}
 	

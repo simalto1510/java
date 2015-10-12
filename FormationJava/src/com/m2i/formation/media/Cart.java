@@ -10,7 +10,10 @@ public class Cart {
 	public List<Media> getMedias() {
 		return medias;
 	}
-	
+	/**
+	 * Retourne le prix TTC du panier par polymorphisme
+	 * @return
+	 */
 	public  double getVATPrice(){
 		double VATPrice = 0;
 		for (Media mNew:medias){
