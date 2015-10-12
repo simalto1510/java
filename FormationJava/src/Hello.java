@@ -1,6 +1,5 @@
 //import java.util.Date;
-import java.util.Random;
-
+import java.util.*;
 import com.m2i.formation.media.*;
 /*Same as like the name above
  * 
@@ -227,7 +226,7 @@ public class Hello {
 	   System.out.println("|*************************************************************| ");
 	   System.out.println(" ");**/
 //Define books	   
-	  Book b = new Book();
+	/*  Book b = new Book();
 	  b.setId(12345678);
 	  b.setIsbn(1877309916);
 	  b.setLang("chinese");
@@ -299,7 +298,7 @@ public class Hello {
 	  System.out.println(" ");
 	  System.out.println(" The second book : " );
 	 
-	  b1.afficher(); 
+	  b1.afficher(); */
 	  
 	//Cd 
 	  
@@ -329,10 +328,10 @@ public class Hello {
 	  d.afficher(); */
 	  
 	 //polymorphism's basics
-	  Media m=new Book();
+	/*  Media m=new Book();
 	  m.setPrice(10);
 	  double pricenew =m.getVATPrice();
-	  System.out.println(" New price : " +pricenew);
+	  System.out.println(" New price : " +pricenew);*/
 	  
 	  
 	  
@@ -365,7 +364,58 @@ public class Hello {
 	  else{
 		  System.out.println(" Those two books "+ b1.getTitle()+" and "+ b3.getTitle()+" are Different ");
 	  }**/
-			   
+			 
+		
+		
+//Test sur la liste
+	
+  /* CollectionTest listOut= new CollectionTest();
+	List<Book> listB = listOut.listTest();
+	Set<Book> SetB = listOut.setTest();
+	Map<Integer, Book> m = listOut.mapTest();
+	Book b1=new Book();
+	b1.getDate();
+	
+    System.out.println(" \n ListBooks : ");
+	 for (Book bNouv:listB){
+		 bNouv.afficher();
+	 }
+	
+      System.out.println(" \n SetBooks : ");
+	 
+	 for (Book bNouv:SetB){
+		 bNouv.afficher();
+	 }	
+	 System.out.println(" \n  ");
+	
+	System.out.println(" \n MapBooks : ");
+	
+	b1 =m.get(123);
+	for(int key: m.keySet()){
+		 System.out.println(key);
+		 System.out.println(m.get(key));
+	}
+		*/
+		
+		
+	Cart cartList = new Cart();
+	Media b=new Book();
+    b.setPrice(10);
+    
+    Media cd=new Cd();
+    cd.setPrice(11);
+    
+    Media dvd = new Dvd();
+    dvd.setPrice(11);
+    
+    cartList.getMedias().add(b);//getMedias return a list of type Media thus we have access
+    cartList.getMedias().add(cd);// to different of List Media
+    cartList.getMedias().add(dvd);
+    
+  
+    double result = cartList.getVATPrice();
+    System.out.println(" \n VAT Price : "+ result);
+     
 	}
 	
 	

@@ -62,6 +62,6 @@ public class Book extends Media {
 	
 	@Override
 	public double getVATPrice(){
-		return getPrice() * 1.05;
+		return getPrice() * 1.15;
 	}
 }

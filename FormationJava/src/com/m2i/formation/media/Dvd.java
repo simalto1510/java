@@ -1,6 +1,6 @@
 package com.m2i.formation.media;
 
-public abstract class Dvd extends Media {
+public class Dvd extends Media {
 	private int region;
 	
 	
@@ -18,6 +18,6 @@ public abstract class Dvd extends Media {
 	
 	@Override
 	public double getVATPrice(){
-		return getPrice() * 1.05;
+		return getPrice() * 1.10;
 	}
 }

@@ -1,6 +1,6 @@
 package com.m2i.formation.media;
 
-public abstract class Cd extends Media {
+public  class Cd extends Media {
 	private int nbTrack;
 	
 	public void afficher(){
