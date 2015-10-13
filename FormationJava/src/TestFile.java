@@ -2,6 +2,7 @@ import java.util.*;
 
 import com.m2i.formation.media.Author;
 import com.m2i.formation.media.Book;
+import com.m2i.formation.media.MediaException;
 import com.m2i.formation.media.Publisher;
 
 import java.io.*;
@@ -56,7 +57,7 @@ public class TestFile
 		br.close();
 		}
 
-		public List<Book> readBook(String uri) throws IOException
+		public List<Book> readBook(String uri) throws IOException, MediaException
 		{
 			 List<Book> listBook = new ArrayList<Book>();
 			 Book b = new Book();
@@ -64,7 +65,9 @@ public class TestFile
 			 Publisher p= new Publisher();
 			 BufferedReader br = new BufferedReader(new FileReader(uri));
 			 String line;
-			 int i=1;
+			
+			
+		
 		
 			 
 			line=br.readLine();
@@ -78,19 +81,25 @@ public class TestFile
 				// treatment
 				
 				//read the line of the file 
-				i++;
+			    
+		
 				StringTokenizer st = new StringTokenizer(line,";");
 				b.setTitle(st.nextToken());
 				b.setNbPage(Integer.parseInt(st.nextToken()));
 				b.setPrice(Double.parseDouble(st.nextToken()));
 				a.setFirstname(st.nextToken());
 				p.setNom(st.nextToken());
+				b.setPublisher(p);
+				b.addAuthor(a);
+				
 			   
 				line=br.readLine();
 				listBook.add(b);
+				
 			
 			
 			}
+			
 			br.close();
 			
 			return listBook;
