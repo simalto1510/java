@@ -1,5 +1,6 @@
 //import java.util.Date;
 import java.util.*;
+import java.io.*;
 import com.m2i.formation.media.*;
 /*Same as like the name above
  * 
@@ -226,7 +227,7 @@ public class Hello {
 	   System.out.println("|*************************************************************| ");
 	   System.out.println(" ");**/
 //Define books	   
-	Book b = new Book();
+	/*Book b = new Book();
 	  b.setId(12345678);
 	  b.setIsbn(1877309916);
 	  b.setLang("chinese");
@@ -325,7 +326,7 @@ public class Hello {
 	  d.setPublisher(p2);
 	  d.setRegion(20);
 	  d.setTitle("Hitch");
-	  d.afficher(); 
+	  d.afficher(); */
 	  
 	 //polymorphism's basics
 	/*  Media m=new Book();
@@ -349,7 +350,7 @@ public class Hello {
       **/
 	  
 	  
-	  Book b4 = new Book();
+	/*  Book b4 = new Book();
 	  b4.setTitle("Laugh");
 	  Book b5 = new Book();
 	  b5.setTitle("Low");
@@ -422,6 +423,23 @@ Cart cartList = new Cart();
 		int monentier= Integer.getInteger(machaine);
 		monentier = Integer.parseInt(machaine);
 		Integer.toString(monentier);*/
+		
+//File Treatment
+		
+		TestFile testF= new TestFile();
+		List<Book> listBook = new ArrayList<Book>();
+		try {
+			//testF.Readfile("C:\\Users\\adminlocal\\Desktop\\Booklist.csv");
+			listBook=testF.readBook("C:\\Users\\adminlocal\\Desktop\\Booklist.csv");
+			System.out.println(" \n ListBooks : ");
+			 for (Book bNouv:listBook){
+				 bNouv.afficher();
+			 }
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
      
 	}

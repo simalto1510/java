@@ -2,7 +2,8 @@ package com.m2i.formation.dna;
 
 public class Codon {
 
-	RNABase[] rnaBase = new RNABase[3];
+	private RNABase[] rnaBase = new RNABase[3];
+	private AminoAcid aminoAcid;
 	
 	//Constructor
 	public Codon(){
@@ -10,12 +11,18 @@ public class Codon {
 	}
 	//Getters and setters
 
+	public AminoAcid getAminoAcid() {
+		return aminoAcid;
+	}
+
 	public RNABase[] getRnaBase() {
 		return rnaBase;
 	}
 
-	public void setRnaBase(RNABase[] rnaBase) {
-		this.rnaBase = rnaBase;
+	public void setAminoAcid(AminoAcid aminoAcid) {
+		this.aminoAcid = aminoAcid;
 	}
+
+	
 	
 }
