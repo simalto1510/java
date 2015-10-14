@@ -1,4 +1,4 @@
-package com.m2i.formation.media;
+package com.m2i.formation.media.entities;
 
 public class Item implements Iitem {
 	private int id;
@@ -12,7 +12,6 @@ public class Item implements Iitem {
 		System.out.println(" The title  : " + title);
 		System.out.println(" Its Id is : " + id);
 		System.out.println(" It costs : " + price+" $ ");
-		System.out.println(" ");
 	}
 	/* (non-Javadoc)
 	 * @see com.m2i.formation.media.Iitem#getId()

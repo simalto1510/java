@@ -1,11 +1,13 @@
 
-import com.m2i.formation.media.*;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.HashMap;
 import java.util.List;
 
 import java.util.Set;
+
+import com.m2i.formation.media.entities.*;
+
 import java.util.Map;
  
 

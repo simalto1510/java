@@ -1,12 +1,10 @@
 //import java.util.Date;
 import java.util.*;
+
+import com.m2i.formation.media.entities.*;
+import com.m2i.formation.media.repositories.BookRepository;
+
 import java.io.*;
-import com.m2i.formation.media.*;
-/*Same as like the name above
- * 
-  import com.m2i.formation.media.Book;
-import com.m2i.formation.media.BookCategory;
-import com.m2i.formation.media.Publisher;*/
 
 public class Hello {
 
@@ -426,20 +424,46 @@ Cart cartList = new Cart();
 		
 //File Treatment
 		
-		TestFile testF= new TestFile();
+	    BookRepository bp = new BookRepository();
 		List<Book> listBook = new ArrayList<Book>();
+		//Book bTest = new Book();
+		String wordTest = "Conte";
+		
 		try {
-			//testF.Readfile("C:\\Users\\adminlocal\\Desktop\\Booklist.csv");
-			listBook=testF.readBook("C:\\Users\\adminlocal\\Desktop\\Booklist.csv");
+			
+			bp.setUri("C:\\Users\\adminlocal\\Desktop\\Booklist.csv");
+			/*listBook=bp.getAll();
 			System.out.println(" \n ListBooks : ");
 			 for (Book bNouv:listBook){
 				 bNouv.afficher();
 			 }
-			
+			 System.out.println("***************************** ");
+			 bTest = bp.getById(3);
+			 System.out.println(" \n Book choisi par son id n°" +bTest.getId());
+			 bTest.afficher();
+			 System.out.println("***************************** "); 
+			 listBook= bp.getByPrice(17);
+			 System.out.println(" \n Book choisi par son Price : 20");
+			 for (Book bNouv1:listBook){
+				 bNouv1.afficher();
+			 }
+			 System.out.println("***************************** ");*/
+			 listBook= bp.getByTitle(wordTest);
+			 System.out.println(" \n Book choisi par son titre : " +wordTest);
+			 for (Book bNouv2:listBook){
+				 bNouv2.afficher();
+			 }
+
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		} catch (MediaException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
+	
+
+		//Singleton singleton = Singleton.getInstance();
 		
      
 	}

@@ -1,9 +1,9 @@
 import java.util.*;
 
-import com.m2i.formation.media.Author;
-import com.m2i.formation.media.Book;
-import com.m2i.formation.media.MediaException;
-import com.m2i.formation.media.Publisher;
+import com.m2i.formation.media.entities.Author;
+import com.m2i.formation.media.entities.Book;
+import com.m2i.formation.media.entities.MediaException;
+import com.m2i.formation.media.entities.Publisher;
 
 import java.io.*;
 
@@ -19,7 +19,7 @@ public class TestFile
 		String publisher;
 		double price;
 		int nbPages;
-		int i = 1;
+		int id;
 		
 		line=br.readLine();
 		line=br.readLine(); // To not read the title of column 
@@ -33,17 +33,15 @@ public class TestFile
 			//read the line of the file 
 			StringTokenizer st = new StringTokenizer(line,";");
 			
-			i++;
 			title = st.nextToken();
+			id= Integer.parseInt(st.nextToken());
 			nbPages= Integer.parseInt(st.nextToken());
 			price= Double.parseDouble(st.nextToken());
-			//nbPages=st.nextToken();
-		//	price= st.nextToken();
 			author=st.nextToken();
 			publisher=st.nextToken();
 			
 			;
-			System.out.println(" information of Book n° " +i);
+			System.out.println(" Id du book " +id);
 			System.out.println(" Title : " + title);
 			System.out.println(" Nb pages : " + nbPages);
 			System.out.println(" Price : " + price);
@@ -60,9 +58,6 @@ public class TestFile
 		public List<Book> readBook(String uri) throws IOException, MediaException
 		{
 			 List<Book> listBook = new ArrayList<Book>();
-			 Book b = new Book();
-			 Author a= new Author();
-			 Publisher p= new Publisher();
 			 BufferedReader br = new BufferedReader(new FileReader(uri));
 			 String line;
 			
@@ -81,10 +76,13 @@ public class TestFile
 				// treatment
 				
 				//read the line of the file 
-			    
+				Book b = new Book();
+				Author a= new Author();
+				Publisher p= new Publisher();
 		
 				StringTokenizer st = new StringTokenizer(line,";");
 				b.setTitle(st.nextToken());
+				b.setId(Integer.parseInt(st.nextToken()));
 				b.setNbPage(Integer.parseInt(st.nextToken()));
 				b.setPrice(Double.parseDouble(st.nextToken()));
 				a.setFirstname(st.nextToken());

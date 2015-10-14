@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.1.8" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
   associations="true" dependencies="false" nesting-relationships="true">  
-  <class id="1" language="java" name="com.m2i.formation.media.Media" project="FormationJava" 
-    file="/FormationJava/src/com/m2i/formation/media/Media.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="1" language="java" name="com.m2i.formation.media.entities.Media" project="FormationJava" 
+    file="/FormationJava/src/com/m2i/formation/media/entities/Media.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="471" y="306"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -10,8 +10,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="2" language="java" name="com.m2i.formation.media.Book" project="FormationJava" 
-    file="/FormationJava/src/com/m2i/formation/media/Book.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="2" language="java" name="com.m2i.formation.media.entities.Book" project="FormationJava" 
+    file="/FormationJava/src/com/m2i/formation/media/entities/Book.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="730" y="262"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -19,8 +19,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="3" language="java" name="com.m2i.formation.media.Publisher" project="FormationJava" 
-    file="/FormationJava/src/com/m2i/formation/media/Publisher.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="3" language="java" name="com.m2i.formation.media.entities.Publisher" project="FormationJava" 
+    file="/FormationJava/src/com/m2i/formation/media/entities/Publisher.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="253" y="477"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -28,8 +28,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <enumeration id="4" language="java" name="com.m2i.formation.media.BookCategory" project="FormationJava" 
-    file="/FormationJava/src/com/m2i/formation/media/BookCategory.java" binary="false" corner="BOTTOM_RIGHT">    
+  <enumeration id="4" language="java" name="com.m2i.formation.media.entities.BookCategory" project="FormationJava" 
+    file="/FormationJava/src/com/m2i/formation/media/entities/BookCategory.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="939" y="216"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -37,8 +37,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </enumeration>  
-  <class id="5" language="java" name="com.m2i.formation.media.Item" project="FormationJava" 
-    file="/FormationJava/src/com/m2i/formation/media/Item.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="5" language="java" name="com.m2i.formation.media.entities.Item" project="FormationJava" 
+    file="/FormationJava/src/com/m2i/formation/media/entities/Item.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="246" y="55"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -46,8 +46,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="6" language="java" name="com.m2i.formation.media.Cd" project="FormationJava" 
-    file="/FormationJava/src/com/m2i/formation/media/Cd.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="6" language="java" name="com.m2i.formation.media.entities.Cd" project="FormationJava" 
+    file="/FormationJava/src/com/m2i/formation/media/entities/Cd.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="405" y="-13"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -55,8 +55,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="7" language="java" name="com.m2i.formation.media.Dvd" project="FormationJava" 
-    file="/FormationJava/src/com/m2i/formation/media/Dvd.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="7" language="java" name="com.m2i.formation.media.entities.Dvd" project="FormationJava" 
+    file="/FormationJava/src/com/m2i/formation/media/entities/Dvd.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="554" y="21"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -64,8 +64,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="8" language="java" name="com.m2i.formation.media.Cart" project="FormationJava" 
-    file="/FormationJava/src/com/m2i/formation/media/Cart.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="8" language="java" name="com.m2i.formation.media.entities.Cart" project="FormationJava" 
+    file="/FormationJava/src/com/m2i/formation/media/entities/Cart.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="89" y="242"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -73,8 +73,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="9" language="java" name="com.m2i.formation.media.Author" project="FormationJava" 
-    file="/FormationJava/src/com/m2i/formation/media/Author.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="9" language="java" name="com.m2i.formation.media.entities.Author" project="FormationJava" 
+    file="/FormationJava/src/com/m2i/formation/media/entities/Author.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="585" y="598"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -82,62 +82,70 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <association id="10">    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="11" name="authors"/>      
-      <multiplicity id="12" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="9" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="13">    
+  <generalization id="10">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <generalization id="11">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <generalization id="12">    
     <end type="SOURCE" refId="7"/>    
     <end type="TARGET" refId="1"/>  
   </generalization>  
-  <generalization id="14">    
+  <generalization id="13">    
     <end type="SOURCE" refId="1"/>    
     <end type="TARGET" refId="5"/>  
   </generalization>  
-  <association id="15">    
+  <association id="14">    
     <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="16" name="publisher">        
+      <attribute id="15" name="publisher">        
         <position height="0" width="0" x="156" y="26"/>      
       </attribute>      
-      <multiplicity id="17" minimum="0" maximum="1">        
+      <multiplicity id="16" minimum="0" maximum="1">        
         <position height="0" width="0" x="156" y="26"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="3" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="18">    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="19" name="medias"/>      
-      <multiplicity id="20" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="1" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="21">    
+  <association id="17">    
     <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="22" name="category">        
+      <attribute id="18" name="category">        
         <position height="0" width="0" x="97" y="12"/>      
       </attribute>      
-      <multiplicity id="23" minimum="0" maximum="1">        
+      <multiplicity id="19" minimum="0" maximum="1">        
         <position height="0" width="0" x="97" y="12"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="4" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="24">    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="1"/>  
-  </generalization>  
-  <generalization id="25">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="1"/>  
-  </generalization>  
+  <association id="20">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="21" name="authors">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="22" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="23">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="24" name="medias">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="25" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    
