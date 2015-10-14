@@ -18,6 +18,6 @@ public  class Cd extends Media {
 	
 	@Override
 	public double getVATPrice(){
-		return getPrice() * 1.05;
+		return getPrice() * 1.2;
 	}
 }

@@ -18,6 +18,6 @@ public class Dvd extends Media {
 	
 	@Override
 	public double getVATPrice(){
-		return getPrice() * 1.10;
+		return getPrice() * 1.03;
 	}
 }
