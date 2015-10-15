@@ -1,8 +1,8 @@
 package com.m2i.formation.tests;
-
 import  org.junit.*;
 
-import org.junit.Test;
+
+
 
 public class RepositoriesTests {
 
@@ -12,5 +12,6 @@ public class RepositoriesTests {
 		i++;
 		Assert.assertEquals(2, i);	
 	}
+
 
 }

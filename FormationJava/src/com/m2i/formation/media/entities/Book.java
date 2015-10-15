@@ -64,4 +64,10 @@ public class Book extends Media {
 	public double getVATPrice(){
 		return getPrice() * 1.05;
 	}
+
+	public int getEvaluation() {
+		
+		return 0;
+	}
+
 }

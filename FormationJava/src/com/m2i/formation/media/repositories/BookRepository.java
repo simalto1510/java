@@ -389,6 +389,11 @@ public class BookRepository implements IRepository<Book> {
 		br.close();
 		return listBook;
 	}
+
+	public void insert(Book b) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 
 }

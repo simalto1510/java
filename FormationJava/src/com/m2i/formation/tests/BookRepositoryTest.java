@@ -30,7 +30,8 @@ public class BookRepositoryTest {
 		
 		BookRepository br = new BookRepository();
 		List<Book> lB= new ArrayList<Book>();
-		br.setUri("C:\\Users\\adminlocal\\Desktop\\Booklist.csv");
+		String newUri = "C:\\Users\\adminlocal\\Desktop\\Booklist.csv";
+		br.setUri(newUri);
 		
 		lB = br.getAll();
 		Assert.assertEquals(9,lB.size());
@@ -80,5 +81,20 @@ public class BookRepositoryTest {
 		
 		Assert.assertEquals(nbBookexpectedTest,lB.size());
 	}
+	
+	@Test
+	public void insertBookTest() throws IOException, MediaException {
+		Book b = new Book();
+		b.setTitle("Java");
+		b.setPrice(9.99);
+		BookRepository br = new BookRepository();
+		
+		
+		int nbbook = br.getAll().size();
+		br.insert(b);
+		Assert.assertEquals(nbbook+1, br.getAll().size());	
+	}
+	
+	
 	
 }
