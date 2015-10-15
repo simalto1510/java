@@ -1,12 +1,8 @@
 package com.m2i.formation.media.entities;
 
-public interface Iitem {
+public interface Iitem extends IEntity {
 
 	void afficher();
-
-	int getId();
-
-	void setId(int id);
 
 	String getTitle();
 

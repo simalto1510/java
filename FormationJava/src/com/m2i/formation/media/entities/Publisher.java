@@ -1,10 +1,11 @@
 package com.m2i.formation.media.entities;
 
-public class Publisher {
+public class Publisher implements IEntity {
 	private String nom;
 	private int siret;
 	private String email;
 	private String pays;
+	private int id;
 	
 //Methods of class BOOK to delete here !!!!!
 	public void afficher(){
@@ -37,5 +38,12 @@ public class Publisher {
 	public void setPays(String pays) {
 		this.pays = pays;
 	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	
 	
 }

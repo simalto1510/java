@@ -1,8 +1,9 @@
 package com.m2i.formation.media.entities;
 
-public class Author {
+public class Author implements IEntity {
 	private String firstname;
 	private String lastname;
+	private int id;
 	
 	public void afficher(){
 		System.out.println(" First name : " + firstname);
@@ -23,5 +24,13 @@ public class Author {
 	public void setLastname(String lastname) {
 		this.lastname = lastname;
 	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	
 	
 }
